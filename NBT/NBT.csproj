@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2A319311-BF69-4A6C-8960-00DB740DBA96}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NBT</RootNamespace>
+    <AssemblyName>NBT</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\NBT_EndOfStreamException.cs" />
+    <Compile Include="Exceptions\NBT_Exception.cs" />
+    <Compile Include="Exceptions\NBT_InvalidArgumentException.cs" />
+    <Compile Include="Exceptions\NBT_InvalidArgumentNullException.cs" />
+    <Compile Include="Exceptions\NBT_InvalidTagTypeException.cs" />
+    <Compile Include="Exceptions\NBT_IOException.cs" />
+    <Compile Include="IO\Compression\NBTCompressionHeaders.cs" />
+    <Compile Include="IO\Compression\NBTCompressionTypes.cs" />
+    <Compile Include="IO\Compression\ZLIB\Adler32.cs" />
+    <Compile Include="IO\Compression\ZLIB\ZLibHeader.cs" />
+    <Compile Include="IO\Compression\ZLIB\ZLIBStream.cs" />
+    <Compile Include="IO\NBTFile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tags\Tag.cs" />
+    <Compile Include="Tags\TagByte.cs" />
+    <Compile Include="Tags\TagByteArray.cs" />
+    <Compile Include="Tags\TagCompound.cs" />
+    <Compile Include="Tags\TagDateTime.cs" />
+    <Compile Include="Tags\TagDouble.cs" />
+    <Compile Include="Tags\TagDoubleArray.cs" />
+    <Compile Include="Tags\TagEnd.cs" />
+    <Compile Include="Tags\TagFloat.cs" />
+    <Compile Include="Tags\TagFloatArray.cs" />
+    <Compile Include="Tags\TagImage.cs" />
+    <Compile Include="Tags\TagImageArray.cs" />
+    <Compile Include="Tags\TagInt.cs" />
+    <Compile Include="Tags\TagIntArray.cs" />
+    <Compile Include="Tags\TagIP.cs" />
+    <Compile Include="Tags\TagList.cs" />
+    <Compile Include="Tags\TagLong.cs" />
+    <Compile Include="Tags\TagLongArray.cs" />
+    <Compile Include="Tags\TagMAC.cs" />
+    <Compile Include="Tags\TagSByte.cs" />
+    <Compile Include="Tags\TagSByteArray.cs" />
+    <Compile Include="Tags\TagShort.cs" />
+    <Compile Include="Tags\TagShortArray.cs" />
+    <Compile Include="Tags\TagString.cs" />
+    <Compile Include="Tags\TagTimeSpan.cs" />
+    <Compile Include="Tags\TagTypes.cs" />
+    <Compile Include="Tags\TagUInt.cs" />
+    <Compile Include="Tags\TagUIntArray.cs" />
+    <Compile Include="Tags\TagULong.cs" />
+    <Compile Include="Tags\TagULongArray.cs" />
+    <Compile Include="Tags\TagUShort.cs" />
+    <Compile Include="Tags\TagUShortArray.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
